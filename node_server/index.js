@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const { urlConnection } = require("./config");
+const { urlConnection, port } = require("./config");
 const Travel = require("./travel");
 const app = express();
 
@@ -82,6 +82,8 @@ mongoose.connect(urlConnection, {}, (error) => {
 })
 
 // Inicia o servidor
-app.listen(2000, () => {
-    console.log("listening on port 2000");
+app.listen(port, () => {
+    console.log("listening on port: " + port);
 })
+
+module.exports = app;

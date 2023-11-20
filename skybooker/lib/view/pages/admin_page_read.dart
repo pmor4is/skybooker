@@ -61,6 +61,9 @@ class _AdminPageDataState extends State<AdminPageData> {
                                   await Api.deleteTravel(travelData[index].id);
                                   travelData.removeAt(index);
                                   setState(() {});
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Viagem deletada"))
+                                  );
                                 },
                               ),
                             ],
