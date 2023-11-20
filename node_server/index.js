@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const { MONGODB_URI, port } = require("./config");
+const { urlConnection, port } = require("./config");
 const Travel = require("./travel");
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(express.urlencoded({
 }));
 
 mongoose.set('strictQuery', true);
-mongoose.connect(MONGODB_URI, {}, (error) => {
+mongoose.connect(urlConnection, {}, (error) => {
     if (!error) {
         console.log("Status", "Connected to mongoose");
 

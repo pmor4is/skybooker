@@ -6,5 +6,5 @@ const {
 } = process.env;
 module.exports = {
     port: PORT,
-    MONGODB_URI: MONGODB_URI
+    urlConnection: MONGODB_URI
 }
