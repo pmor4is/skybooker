@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const { urlConnection, port } = require("./config");
+const { MONGODB_URI, port } = require("./config");
 const Travel = require("./travel");
 const app = express();
 
@@ -12,15 +12,9 @@ app.use(express.urlencoded({
 }));
 
 mongoose.set('strictQuery', true);
-mongoose.connect(urlConnection, {}, (error) => {
+mongoose.connect(MONGODB_URI, {}, (error) => {
     if (!error) {
         console.log("Status", "Connected to mongoose");
-
-        // app.get("/", (req, res) => {
-        //     console.log("Response ok.");
-        //     //Resposta para verificar se o servidor esta online
-        //     res.send("Ok – Server online.");
-        //   });
 
         //post API
         app.post("/api/add_travel", async (req, res) => {
