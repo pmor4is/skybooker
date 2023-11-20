@@ -14,6 +14,12 @@ mongoose.connect(urlConnection, {}, (error) => {
     if (!error) {
         console.log("Status", "Connected to mongoose");
 
+        app.get("/", (req, res) => {
+            console.log("Response ok.");
+            //Resposta para verificar se o servidor esta online
+            res.send("Ok – Server online.");
+          });
+
         //post API
         app.post("/api/add_travel", async (req, res) => {
             console.log("Result", req.body);
@@ -86,4 +92,4 @@ app.listen(port, () => {
     console.log("listening on port: " + port);
 })
 
-module.exports = app;
+// module.exports = app;
