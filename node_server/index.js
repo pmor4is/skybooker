@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const { urlConnection, port } = require("./config");
-const Travel = require("./travel");
+const Travel = require("./models/travel");
 const app = express();
 
 app.use(cors());
@@ -87,5 +87,3 @@ mongoose.connect(urlConnection, {}, (error) => {
 app.listen(port, () => {
     console.log("listening on port: " + port);
 })
-
-module.exports = mongoose;
