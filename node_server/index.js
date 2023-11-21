@@ -5,7 +5,7 @@ const { urlConnection, port } = require("./config");
 const Travel = require("./models/travel");
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
