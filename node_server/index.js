@@ -4,17 +4,18 @@ const cors = require("cors");
 const { urlConnection, port } = require("./config");
 const Travel = require("./models/travel");
 const app = express();
+const connectDatabase = require("./connect-mongo-db");
 
 // app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
-
-mongoose.set('strictQuery', true);
-mongoose.connect(urlConnection, {}, (error) => {
-    if (!error) {
-        console.log("Status", "Connected to mongoose");
+connectDatabase();
+// mongoose.set('strictQuery', true);
+// mongoose.connect(urlConnection, {}, (error) => {
+//     if (!error) {
+//         console.log("Status", "Connected to mongoose");
 
         //post API
         app.post("/api/add_travel", async (req, res) => {
@@ -78,14 +79,14 @@ mongoose.connect(urlConnection, {}, (error) => {
             }
         })
 
-    } else {
-        console.log(error.message);
-    }
-})
+    // } else {
+    //     console.log(error.message);
+    // }
+// })
 
 // Inicia o servidor
 app.listen(port, () => {
     console.log("listening on port: " + port);
 })
 
-module.exports = mongoose.connect;
+// module.exports = mongoose.connect;
