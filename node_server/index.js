@@ -87,3 +87,7 @@ mongoose.connect(urlConnection, {}, (error) => {
 app.listen(port, () => {
     console.log("listening on port: " + port);
 })
+
+
+module.exports = mongoose;
+module.exports = app;
