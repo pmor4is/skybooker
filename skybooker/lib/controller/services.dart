@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:skybooker/model/travel_model.dart';
 
 class Api {
-  static const baseUrl = "http://192.168.0.117/api/";
+  static const baseUrl = "https://skybooker.vercel.app/api/";
 
   // Create method
   static addTravel(Map travelData) async {
