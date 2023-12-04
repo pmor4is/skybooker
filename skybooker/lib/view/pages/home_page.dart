@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
           future: Api.getTravel(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             // Verificação de conexão
-            if (snapshot.connectionState == ConnectionState.waiting) {
+            if (snapshot.connectionState == ConnectionState.waiting) {  
               return const Center(
                 child: CircularProgressIndicator(),
               );
