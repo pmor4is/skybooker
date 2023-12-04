@@ -69,8 +69,12 @@ class _TravelCardState extends State<TravelCard> {
                   ),
           
                 ),
-              )  
-              // Text(widget.data.description ?? "Descrição indisponível"),
+              ), 
+               Container(
+                margin: EdgeInsets.only(left:50),
+                child: Text(widget.data.description ?? "Descrição indisponível"),
+              ),
+               
             ],
           ),
           Spacer(),
