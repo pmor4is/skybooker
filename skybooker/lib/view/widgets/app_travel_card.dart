@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skybooker/model/travel_model.dart';
-import 'package:skybooker/view/pages/travel_page.dart';
+import 'package:skybooker/view/pages/travel_detail.dart';
 
 class TravelCard extends StatefulWidget {
   final Travel data;
@@ -32,7 +32,7 @@ class _TravelCardState extends State<TravelCard> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => TravelPage(data: widget.data)));
+                          builder: (context) => TravelDetail(data: widget.data)));
                   },
                 ),
               ],
