@@ -50,37 +50,37 @@ class _TravelCardState extends State<TravelCard> {
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 50),
-                child: Text(
+                margin: const EdgeInsets.only(left: 50),
+                child: const Text(
                   "De itabira a",
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 50),
+                margin: const EdgeInsets.only(left: 50),
                 child: Text(
                   widget.data.destiny ?? "Destino indisponivel",
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 2, 82, 156),
+                  style: const TextStyle(
+                    color:  Color(0xFF02529C),
                     fontSize: 23,
                   ),
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 50),
+                margin: const EdgeInsets.only(left: 50),
                 child:
                     Text(widget.data.description ?? "Descrição indisponível"),
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(right: 25),
+                margin: const EdgeInsets.only(right: 25),
                 child: Text(
                   widget.data.price ?? "Preço indisponível",
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Color.fromARGB(255, 2, 82, 156),
                     // fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -89,7 +89,6 @@ class _TravelCardState extends State<TravelCard> {
               )
             ],
           ),
-
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -116,7 +115,6 @@ class _TravelCardState extends State<TravelCard> {
               )
             ],
           ),
-
         ],
       ),
     );

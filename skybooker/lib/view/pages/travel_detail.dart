@@ -24,15 +24,15 @@ class _TravelDetailState extends State<TravelDetail> {
 
     return Scaffold(
       appBar: ResponsiveWidget.isSmallScreen(context)
-          ? PreferredSize(
+          ? const PreferredSize(
               preferredSize: Size.fromHeight(100),
-              child: const AppNavigationBar(
+              child: AppNavigationBar(
                 appBarName: 'Viagem selecionada\nSeleção de assentos:',
               ),
             )
-          : PreferredSize(
+          : const PreferredSize(
               preferredSize: Size.fromHeight(100),
-              child: const WebNavigationBar(),
+              child: WebNavigationBar(),
             ),
       body: Center(
         child: Column(
@@ -40,8 +40,8 @@ class _TravelDetailState extends State<TravelDetail> {
           children: [
             // Parte acima do Expanded
             Container(
-              margin: EdgeInsets.all(8.0),
-              child: Text(
+              margin: const EdgeInsets.all(8.0),
+              child: const Text(
                 'Selecione o assento:',
                 style: TextStyle(
                   fontSize: 18.0,
@@ -57,7 +57,7 @@ class _TravelDetailState extends State<TravelDetail> {
                   // Parte central com o GridView
                   Expanded(
                     child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 10,
                         crossAxisSpacing: 1,
                         mainAxisSpacing: 1,
@@ -81,7 +81,7 @@ class _TravelDetailState extends State<TravelDetail> {
                       },
                     ),
                   ),
-                  SizedBox(width: 11),
+                  const SizedBox(width: 11),
                   // Coluna à direita
                   Container(
                     width: MediaQuery.of(context).size.width / 3,
@@ -90,11 +90,11 @@ class _TravelDetailState extends State<TravelDetail> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('Destino: ${widget.data.destiny}'),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text('Descrição: ${widget.data.description}'),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text('Preço da passagem: ${widget.data.price}'),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text('Preço final: ${contpolts * precoPasg}')
                       ],
                     ),

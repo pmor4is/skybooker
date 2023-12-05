@@ -12,7 +12,7 @@ class WebNavigationBar extends StatelessWidget {
     return PreferredSize(
       preferredSize: Size(screenSize.width, 1000),
       child: Container(
-        color: Color(0xFF6CABDF),
+        color: const Color(0xFF6CABDF),
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Row(
@@ -31,7 +31,7 @@ class WebNavigationBar extends StatelessWidget {
                       height: 40, 
                       width: 40, 
                     ),
-                    SizedBox(width: 10), // ajuste o espaçamento conforme necessário
+                    const SizedBox(width: 10), // ajuste o espaçamento conforme necessário
                     const Text('Skybooker'),
                   ],
                 ),
