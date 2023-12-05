@@ -1,15 +1,15 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:skybooker/controller/services.dart';
 import 'package:skybooker/model/travel_model.dart';
 import 'package:skybooker/view/widgets/app_navigation_bar.dart';
 import 'package:skybooker/view/widgets/travel_card.dart';
 import 'package:skybooker/view/widgets/web_navigation_bar.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
 import '../widgets/responsive_widget.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,6 @@ class HomePage extends StatelessWidget {
               ),
             )
           : PreferredSize(
-              // for larger & medium screen sizes
               preferredSize: Size(screenSize.width, 1000),
               child: const WebNavigationBar(),
             ),
