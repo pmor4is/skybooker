@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:skybooker/view/pages/home_page.dart';
+import 'package:skybooker/view/pages/travels_page.dart';
 
 class WebNavigationBar extends StatelessWidget {
   const WebNavigationBar({super.key});
@@ -15,13 +17,16 @@ class WebNavigationBar extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: Row(
               children: [
-                const Text('Skybooker'),
+                InkWell(onTap: () {Navigator.push(context,
+                        MaterialPageRoute(builder: ((context) => const HomePage())));},
+                        child: const Text('Skybooker')),
                 Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       InkWell(
-                        onTap: () {},
+                        onTap: () {Navigator.push(context,
+                        MaterialPageRoute(builder: ((context) => const TravelsPage())));},
                         child: const Text(
                           'Viagens',
                           style: TextStyle(color: Colors.black),
