@@ -17,7 +17,7 @@ class _AppNavigationBarState extends State<AppNavigationBar> {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(widget.appBarName),
-      backgroundColor: Colors.purple,
+      backgroundColor: Color(0xFF6CABDF),
       centerTitle: true,
     );
   }
